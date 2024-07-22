@@ -8,7 +8,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
     <groupId>th.mfu</groupId>
-    <artifactId>sample-boot-basic</artifactId>
+    <artifactId>sample-boot-basic</artifactId> 
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
