@@ -1,9 +1,14 @@
-package th.mfu;
+package th.mfu.domain;
 
+import java.util.List;
+
+import javax.annotation.Generated;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Product {
@@ -13,7 +18,10 @@ public class Product {
     private String name;
     private String description;
     private double price;
-    
+
+    // @ManyToMany(mappedBy = "products", fetch = FetchType.LAZY)
+    // private List<SaleOrder> saleOrders;
+
     public Long getId() {
         return id;
     }
@@ -38,7 +46,12 @@ public class Product {
     public void setPrice(double price) {
         this.price = price;
     }
+    // public List<SaleOrder> getSaleOrders() {
+    //     return saleOrders;
+    // }
+    // public void setSaleOrders(List<SaleOrder> saleOrders) {
+    //     this.saleOrders = saleOrders;
+    // }
 
     
-
 }
